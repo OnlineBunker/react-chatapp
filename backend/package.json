@@ -1,0 +1,6 @@
+{
+  "name": "chat-backend",
+  "private": true,
+  "scripts": { "start": "node server.js", "test": "node test.js" },
+  "dependencies": { "express": "^4.21.0", "mongodb": "^6.10.0" }
+}
