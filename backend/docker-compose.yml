@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: mongo:7.0
+    volumes: [mongo_data:/data/db]
+  api:
+    build: .
+    ports: ['3000:3000']
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+    depends_on: [mongo]
+volumes:
+  mongo_data:
